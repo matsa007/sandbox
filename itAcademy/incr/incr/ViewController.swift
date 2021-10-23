@@ -16,12 +16,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         label.textColor = .darkGray
     }
  
     @IBAction func upperButton(_ sender: Any) {
         counterLabel+=1
-        label.text = "\(labelPhrase) + \(counterLabel)"
+        label.text = "\(labelPhrase)" + "\(counterLabel)"
     }
     
     @IBAction func lowerButton(_ sender: Any) {
@@ -29,4 +30,3 @@ class ViewController: UIViewController {
         label.text = labelPhrase + String(counterLabel)
     }
 }
-
