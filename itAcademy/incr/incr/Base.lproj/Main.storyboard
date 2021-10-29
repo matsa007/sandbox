@@ -1,29 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tMv-nh-S6b">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Constarain Demo View Controller-->
+        <scene sceneID="FTZ-RJ-YBG">
+            <objects>
+                <viewController id="tMv-nh-S6b" customClass="ConstarainDemoViewController" customModule="incr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Res-9j-1XK" customClass="Constr">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdY-N8-eHD">
+                                <rect key="frame" x="20" y="64" width="165" height="150"/>
+                                <color key="backgroundColor" name="backgroundColor1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="WSf-aS-CGQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFS-Db-ywB">
+                                <rect key="frame" x="205" y="64" width="165" height="150"/>
+                                <color key="backgroundColor" name="backgroundColor2"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rq6-NW-aCW">
+                                <rect key="frame" x="20" y="247" width="350" height="350"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rq6-NW-aCW" secondAttribute="height" multiplier="1:1" id="nds-8i-TSB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UOS-Rm-GI1"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cdY-N8-eHD" firstAttribute="leading" secondItem="UOS-Rm-GI1" secondAttribute="leading" constant="20" id="07x-ee-5Jc"/>
+                            <constraint firstItem="KFS-Db-ywB" firstAttribute="height" secondItem="cdY-N8-eHD" secondAttribute="height" id="4yO-AQ-Jsi"/>
+                            <constraint firstItem="cdY-N8-eHD" firstAttribute="top" secondItem="UOS-Rm-GI1" secondAttribute="top" constant="20" id="BBo-Aa-r7r"/>
+                            <constraint firstItem="UOS-Rm-GI1" firstAttribute="trailing" secondItem="KFS-Db-ywB" secondAttribute="trailing" constant="20" id="Fu3-wJ-lrr"/>
+                            <constraint firstItem="KFS-Db-ywB" firstAttribute="width" secondItem="cdY-N8-eHD" secondAttribute="width" id="IvW-l1-2I2"/>
+                            <constraint firstItem="rq6-NW-aCW" firstAttribute="centerY" secondItem="Res-9j-1XK" secondAttribute="centerY" id="hR2-Yj-spA"/>
+                            <constraint firstItem="KFS-Db-ywB" firstAttribute="leading" secondItem="cdY-N8-eHD" secondAttribute="trailing" constant="20" id="rRD-Uw-B0e"/>
+                            <constraint firstItem="KFS-Db-ywB" firstAttribute="top" secondItem="cdY-N8-eHD" secondAttribute="top" id="sSn-jk-6zf"/>
+                            <constraint firstItem="UOS-Rm-GI1" firstAttribute="trailing" secondItem="KFS-Db-ywB" secondAttribute="trailing" constant="20" id="soc-2s-sO9"/>
+                            <constraint firstItem="rq6-NW-aCW" firstAttribute="leading" secondItem="UOS-Rm-GI1" secondAttribute="leading" constant="20" id="tJ9-Ya-brC"/>
+                            <constraint firstItem="UOS-Rm-GI1" firstAttribute="trailing" secondItem="rq6-NW-aCW" secondAttribute="trailing" constant="20" id="u8A-Sa-0GV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQI-GI-D8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1123.0769230769231" y="48.341232227488149"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="incr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBp-F1-upe">
-                                <rect key="frame" x="207" y="448" width="0.0" height="0.0"/>
+                                <rect key="frame" x="195" y="422" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAc-A5-B5c">
-                                <rect key="frame" x="151" y="144" width="112" height="31"/>
+                                <rect key="frame" x="139" y="144" width="112" height="31"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Increment (+)"/>
@@ -32,7 +81,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksn-0f-88e">
-                                <rect key="frame" x="149" y="731" width="116" height="31"/>
+                                <rect key="frame" x="137" y="679" width="116" height="31"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Decrement (-)"/>
@@ -64,11 +113,23 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundColor1">
+            <color red="0.65786581162734548" green="1" blue="0.34850260597884775" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="backgroundColor2">
+            <color red="1" green="0.78971249409164546" blue="0.28840224236015011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
