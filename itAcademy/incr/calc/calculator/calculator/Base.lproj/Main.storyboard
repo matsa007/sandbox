@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7A-10-XTZ">
-                                <rect key="frame" x="20" y="755" width="174" height="87"/>
+                                <rect key="frame" x="20" y="755" width="116" height="87"/>
                                 <color key="backgroundColor" name="digitsButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="D7A-10-XTZ" secondAttribute="height" multiplier="2:1" id="tOg-Rh-OBV"/>
@@ -34,7 +34,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="0"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxy-dA-hzP">
-                                <rect key="frame" x="214" y="755" width="87" height="87"/>
+                                <rect key="frame" x="156" y="755" width="116" height="87"/>
                                 <color key="backgroundColor" name="digitsButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jxy-dA-hzP" secondAttribute="height" multiplier="1:1" id="l8S-R6-6WC"/>
@@ -44,7 +44,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title=","/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkF-HU-P5A">
-                                <rect key="frame" x="321" y="755" width="87" height="87"/>
+                                <rect key="frame" x="292" y="755" width="116" height="87"/>
                                 <color key="backgroundColor" name="opertaingButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gkF-HU-P5A" secondAttribute="height" multiplier="1:1" id="lHw-VY-EWf"/>
@@ -54,7 +54,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="="/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgN-eg-zeI">
-                                <rect key="frame" x="224" y="653" width="82" height="82"/>
+                                <rect key="frame" x="292" y="648" width="116" height="87"/>
                                 <color key="backgroundColor" name="digitsButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="AgN-eg-zeI" secondAttribute="height" multiplier="1:1" id="GRh-eD-B4T"/>
@@ -64,7 +64,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="3"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibW-ID-m15">
-                                <rect key="frame" x="326" y="653" width="82" height="82"/>
+                                <rect key="frame" x="428" y="648" width="116" height="87"/>
                                 <color key="backgroundColor" name="opertaingButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ibW-ID-m15" secondAttribute="height" multiplier="1:1" id="Fkd-Vi-yTv"/>
@@ -74,7 +74,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="+"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekD-W4-0h8">
-                                <rect key="frame" x="122" y="653" width="82" height="82"/>
+                                <rect key="frame" x="156" y="648" width="116" height="87"/>
                                 <color key="backgroundColor" name="digitsButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ekD-W4-0h8" secondAttribute="height" multiplier="1:1" id="Ic9-ne-2Ta"/>
@@ -84,7 +84,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="2"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oic-4w-FdU">
-                                <rect key="frame" x="20" y="653" width="82" height="82"/>
+                                <rect key="frame" x="20" y="648" width="116" height="87"/>
                                 <color key="backgroundColor" name="digitsButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Oic-4w-FdU" secondAttribute="height" multiplier="1:1" id="GMa-vS-60u"/>
@@ -94,7 +94,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVY-0l-0BG">
-                                <rect key="frame" x="326" y="551" width="82" height="82"/>
+                                <rect key="frame" x="326" y="546" width="82" height="82"/>
                                 <color key="backgroundColor" name="opertaingButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HVY-0l-0BG" secondAttribute="height" multiplier="1:1" id="g9y-bf-SR7"/>
@@ -104,7 +104,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="-"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UH6-ov-T3A">
-                                <rect key="frame" x="224" y="551" width="82" height="82"/>
+                                <rect key="frame" x="224" y="546" width="82" height="82"/>
                                 <color key="backgroundColor" name="digitsButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UH6-ov-T3A" secondAttribute="height" multiplier="1:1" id="ZOe-t2-2Qd"/>
@@ -114,7 +114,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="6"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEq-QW-hYu">
-                                <rect key="frame" x="122" y="551" width="82" height="82"/>
+                                <rect key="frame" x="122" y="546" width="82" height="82"/>
                                 <color key="backgroundColor" name="digitsButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZEq-QW-hYu" secondAttribute="height" multiplier="1:1" id="vJH-EB-hS2"/>
@@ -124,7 +124,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="5"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qF-tc-3nD">
-                                <rect key="frame" x="20" y="551" width="82" height="82"/>
+                                <rect key="frame" x="20" y="546" width="82" height="82"/>
                                 <color key="backgroundColor" name="digitsButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3qF-tc-3nD" secondAttribute="height" multiplier="1:1" id="jQd-Dm-gXh"/>
@@ -134,7 +134,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="4"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9q-i8-Pii">
-                                <rect key="frame" x="326" y="449" width="82" height="82"/>
+                                <rect key="frame" x="326" y="444" width="82" height="82"/>
                                 <color key="backgroundColor" name="opertaingButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="k9q-i8-Pii" secondAttribute="height" multiplier="1:1" id="X1h-Wm-OFV"/>
@@ -144,7 +144,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="X"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pM-g3-OlG">
-                                <rect key="frame" x="224" y="449" width="82" height="82"/>
+                                <rect key="frame" x="224" y="444" width="82" height="82"/>
                                 <color key="backgroundColor" name="digitsButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5pM-g3-OlG" secondAttribute="height" multiplier="1:1" id="wVa-7t-z8F"/>
@@ -154,7 +154,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="9"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEX-yI-tcH">
-                                <rect key="frame" x="122" y="449" width="82" height="82"/>
+                                <rect key="frame" x="122" y="444" width="82" height="82"/>
                                 <color key="backgroundColor" name="digitsButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nEX-yI-tcH" secondAttribute="height" multiplier="1:1" id="srT-68-aaO"/>
@@ -164,7 +164,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="8"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PJ-0i-C7E">
-                                <rect key="frame" x="20" y="449" width="82" height="82"/>
+                                <rect key="frame" x="20" y="444" width="82" height="82"/>
                                 <color key="backgroundColor" name="digitsButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3PJ-0i-C7E" secondAttribute="height" multiplier="1:1" id="Ur8-dx-ESB"/>
@@ -174,7 +174,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="7"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tx-Gj-G0J">
-                                <rect key="frame" x="326" y="347" width="82" height="82"/>
+                                <rect key="frame" x="326" y="342" width="82" height="82"/>
                                 <color key="backgroundColor" name="opertaingButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2tx-Gj-G0J" secondAttribute="height" multiplier="1:1" id="sJj-rP-xlR"/>
@@ -184,7 +184,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="/"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwr-n6-Nbe">
-                                <rect key="frame" x="224" y="347" width="82" height="82"/>
+                                <rect key="frame" x="224" y="342" width="82" height="82"/>
                                 <color key="backgroundColor" name="systemButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Gwr-n6-Nbe" secondAttribute="height" multiplier="1:1" id="wW8-yd-ufu"/>
@@ -194,7 +194,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="%"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYJ-xi-JA0">
-                                <rect key="frame" x="122" y="347" width="82" height="82"/>
+                                <rect key="frame" x="122" y="342" width="82" height="82"/>
                                 <color key="backgroundColor" name="systemButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZYJ-xi-JA0" secondAttribute="height" multiplier="1:1" id="10M-5y-yRC"/>
@@ -204,7 +204,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="+/-"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeW-ml-Rw0">
-                                <rect key="frame" x="20" y="347" width="82" height="82"/>
+                                <rect key="frame" x="20" y="342" width="82" height="82"/>
                                 <color key="backgroundColor" name="systemButtonsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UeW-ml-Rw0" secondAttribute="height" multiplier="1:1" id="pCE-e2-KUM"/>
@@ -219,26 +219,29 @@
                         <constraints>
                             <constraint firstItem="5pM-g3-OlG" firstAttribute="top" secondItem="ZYJ-xi-JA0" secondAttribute="bottom" constant="20" id="0a1-mJ-KFw"/>
                             <constraint firstItem="gkF-HU-P5A" firstAttribute="height" secondItem="D7A-10-XTZ" secondAttribute="height" id="13g-tv-sXH"/>
+                            <constraint firstItem="gkF-HU-P5A" firstAttribute="height" secondItem="ibW-ID-m15" secondAttribute="height" id="2eB-xm-c5Y"/>
                             <constraint firstItem="k9q-i8-Pii" firstAttribute="leading" secondItem="5pM-g3-OlG" secondAttribute="trailing" constant="20" id="3LP-Bl-T2X"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gkF-HU-P5A" secondAttribute="trailing" constant="20" id="3t8-j5-xaQ"/>
                             <constraint firstItem="gkF-HU-P5A" firstAttribute="top" secondItem="ibW-ID-m15" secondAttribute="bottom" constant="20" id="4dz-U8-f5E"/>
                             <constraint firstItem="HVY-0l-0BG" firstAttribute="width" secondItem="ZEq-QW-hYu" secondAttribute="width" id="5ZV-8s-fFM"/>
                             <constraint firstItem="7y7-vK-IAh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="63R-WU-HsD"/>
                             <constraint firstItem="2tx-Gj-G0J" firstAttribute="height" secondItem="Gwr-n6-Nbe" secondAttribute="height" id="6bO-zB-Q9B"/>
-                            <constraint firstItem="jxy-dA-hzP" firstAttribute="top" secondItem="Oic-4w-FdU" secondAttribute="bottom" constant="20" id="6me-SF-QpI"/>
+                            <constraint firstItem="jxy-dA-hzP" firstAttribute="top" secondItem="D7A-10-XTZ" secondAttribute="bottom" constant="-87" id="6me-SF-QpI"/>
                             <constraint firstItem="5pM-g3-OlG" firstAttribute="leading" secondItem="nEX-yI-tcH" secondAttribute="trailing" constant="20" id="80W-E3-wHe"/>
                             <constraint firstItem="2tx-Gj-G0J" firstAttribute="width" secondItem="UeW-ml-Rw0" secondAttribute="width" id="8fv-FR-K4C"/>
+                            <constraint firstItem="gkF-HU-P5A" firstAttribute="width" secondItem="ibW-ID-m15" secondAttribute="width" id="8kZ-PH-Ou0"/>
                             <constraint firstItem="ibW-ID-m15" firstAttribute="height" secondItem="AgN-eg-zeI" secondAttribute="height" id="8m8-B9-2D4"/>
                             <constraint firstItem="gkF-HU-P5A" firstAttribute="height" secondItem="jxy-dA-hzP" secondAttribute="height" id="9aQ-d2-ry9"/>
                             <constraint firstItem="2tx-Gj-G0J" firstAttribute="height" secondItem="UeW-ml-Rw0" secondAttribute="height" id="ALw-uX-FdY"/>
                             <constraint firstItem="AgN-eg-zeI" firstAttribute="top" secondItem="3qF-tc-3nD" secondAttribute="bottom" constant="20" id="ANS-rW-bnZ"/>
                             <constraint firstItem="HVY-0l-0BG" firstAttribute="width" secondItem="3qF-tc-3nD" secondAttribute="width" id="BbS-5l-2bL"/>
                             <constraint firstItem="k9q-i8-Pii" firstAttribute="width" secondItem="5pM-g3-OlG" secondAttribute="width" id="DLH-Cu-zRC"/>
+                            <constraint firstItem="gkF-HU-P5A" firstAttribute="height" secondItem="Oic-4w-FdU" secondAttribute="height" id="EEf-h1-5Wo"/>
                             <constraint firstItem="k9q-i8-Pii" firstAttribute="height" secondItem="nEX-yI-tcH" secondAttribute="height" id="EdC-Ff-qSn"/>
                             <constraint firstItem="ZYJ-xi-JA0" firstAttribute="leading" secondItem="UeW-ml-Rw0" secondAttribute="trailing" constant="20" id="FdO-1r-4Hy"/>
                             <constraint firstItem="HVY-0l-0BG" firstAttribute="height" secondItem="UH6-ov-T3A" secondAttribute="height" id="GRG-fd-mLh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ekD-W4-0h8" secondAttribute="trailing" constant="20" id="Gsy-Lf-QkT"/>
-                            <constraint firstItem="D7A-10-XTZ" firstAttribute="width" secondItem="jxy-dA-hzP" secondAttribute="width" multiplier="2" id="Hdg-Pk-P9u"/>
+                            <constraint firstItem="D7A-10-XTZ" firstAttribute="width" secondItem="jxy-dA-hzP" secondAttribute="width" id="Hdg-Pk-P9u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AgN-eg-zeI" secondAttribute="trailing" constant="20" id="I7q-8r-BTg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ibW-ID-m15" secondAttribute="trailing" constant="20" id="J7U-gw-XuT"/>
                             <constraint firstItem="jxy-dA-hzP" firstAttribute="leading" secondItem="D7A-10-XTZ" secondAttribute="trailing" constant="20" id="JSc-yk-b7o"/>
@@ -248,7 +251,6 @@
                             <constraint firstItem="5pM-g3-OlG" firstAttribute="top" secondItem="UeW-ml-Rw0" secondAttribute="bottom" constant="20" id="M1M-bt-EDs"/>
                             <constraint firstItem="k9q-i8-Pii" firstAttribute="top" secondItem="2tx-Gj-G0J" secondAttribute="bottom" constant="20" id="M2F-RO-C28"/>
                             <constraint firstItem="HVY-0l-0BG" firstAttribute="top" secondItem="5pM-g3-OlG" secondAttribute="bottom" constant="20" id="N1e-UE-DXF"/>
-                            <constraint firstItem="ibW-ID-m15" firstAttribute="width" secondItem="Oic-4w-FdU" secondAttribute="width" id="NFF-2Y-6V0"/>
                             <constraint firstItem="UH6-ov-T3A" firstAttribute="top" secondItem="3PJ-0i-C7E" secondAttribute="bottom" constant="20" id="O0j-jQ-Evj"/>
                             <constraint firstItem="ibW-ID-m15" firstAttribute="top" secondItem="UH6-ov-T3A" secondAttribute="bottom" constant="20" id="OWz-dR-Woo"/>
                             <constraint firstItem="k9q-i8-Pii" firstAttribute="top" secondItem="Gwr-n6-Nbe" secondAttribute="bottom" constant="20" id="PQz-HI-xpI"/>
@@ -258,6 +260,7 @@
                             <constraint firstItem="2tx-Gj-G0J" firstAttribute="leading" secondItem="Gwr-n6-Nbe" secondAttribute="trailing" constant="20" id="TMY-oC-uWU"/>
                             <constraint firstItem="HVY-0l-0BG" firstAttribute="top" secondItem="k9q-i8-Pii" secondAttribute="bottom" constant="20" id="Uvw-Ea-si0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2tx-Gj-G0J" secondAttribute="trailing" constant="20" id="V3f-RS-Mex"/>
+                            <constraint firstItem="Oic-4w-FdU" firstAttribute="baseline" secondItem="ekD-W4-0h8" secondAttribute="baseline" id="Vk3-Jh-5R6"/>
                             <constraint firstItem="AgN-eg-zeI" firstAttribute="leading" secondItem="ekD-W4-0h8" secondAttribute="trailing" constant="20" id="WP4-cO-aiO"/>
                             <constraint firstItem="UH6-ov-T3A" firstAttribute="leading" secondItem="ZEq-QW-hYu" secondAttribute="trailing" constant="20" id="Wso-U3-VCY"/>
                             <constraint firstItem="ibW-ID-m15" firstAttribute="width" secondItem="ekD-W4-0h8" secondAttribute="width" id="X6G-oK-REk"/>
@@ -266,6 +269,7 @@
                             <constraint firstItem="UeW-ml-Rw0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YtV-Y8-7mp"/>
                             <constraint firstItem="k9q-i8-Pii" firstAttribute="height" secondItem="5pM-g3-OlG" secondAttribute="height" id="Z9R-Ps-gB7"/>
                             <constraint firstItem="k9q-i8-Pii" firstAttribute="width" secondItem="nEX-yI-tcH" secondAttribute="width" id="cSe-O7-auZ"/>
+                            <constraint firstItem="gkF-HU-P5A" firstAttribute="width" secondItem="Oic-4w-FdU" secondAttribute="width" id="cub-Ay-Ks9"/>
                             <constraint firstItem="gkF-HU-P5A" firstAttribute="leading" secondItem="jxy-dA-hzP" secondAttribute="trailing" constant="20" id="cyQ-Q3-aFs"/>
                             <constraint firstItem="3qF-tc-3nD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dvN-ML-pDt"/>
                             <constraint firstItem="ibW-ID-m15" firstAttribute="leading" secondItem="AgN-eg-zeI" secondAttribute="trailing" constant="20" id="eYv-P2-ugd"/>
@@ -284,9 +288,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D7A-10-XTZ" secondAttribute="bottom" constant="50" id="nDV-KY-THe"/>
                             <constraint firstItem="AgN-eg-zeI" firstAttribute="top" secondItem="ZEq-QW-hYu" secondAttribute="bottom" constant="20" id="oOD-1o-Zra"/>
                             <constraint firstItem="k9q-i8-Pii" firstAttribute="height" secondItem="3PJ-0i-C7E" secondAttribute="height" id="ors-bx-hwl"/>
-                            <constraint firstItem="D7A-10-XTZ" firstAttribute="width" secondItem="gkF-HU-P5A" secondAttribute="width" multiplier="2" id="pcX-Zr-DTX"/>
+                            <constraint firstItem="D7A-10-XTZ" firstAttribute="width" secondItem="gkF-HU-P5A" secondAttribute="width" id="pcX-Zr-DTX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jxy-dA-hzP" secondAttribute="bottom" constant="50" id="vXt-wH-Dvp"/>
-                            <constraint firstItem="ibW-ID-m15" firstAttribute="height" secondItem="Oic-4w-FdU" secondAttribute="height" id="vnr-hG-iwh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oic-4w-FdU" secondAttribute="trailing" constant="20" id="wJZ-85-8iE"/>
                             <constraint firstItem="2tx-Gj-G0J" firstAttribute="width" secondItem="ZYJ-xi-JA0" secondAttribute="width" id="wNW-dx-6ZR"/>
                             <constraint firstItem="ekD-W4-0h8" firstAttribute="leading" secondItem="Oic-4w-FdU" secondAttribute="trailing" constant="20" id="wfh-Lk-LGj"/>
