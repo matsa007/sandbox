@@ -192,3 +192,56 @@ var ddddd = Ccccc()
 var eeeee = ddddd
 ddddd.rata = 42
 print("\(ddddd.rata), \(eeeee.rata)")
+
+
+var dict1 = Dictionary<String, String>()
+var dict2 = [Int: String]()
+
+var dict3: Dictionary<Int, String> = [:]
+var dict4: [Int: String] = [:]
+
+var dict5 = Dictionary <String, String>(dictionaryLiteral: ("key", "some string"), ("another key", "another string"))
+var dict6: [Int: String] = [1: "Book", 2: "Book 2"]
+var dict7 = [1:1, 2:2, 3:3]
+type(of: dict7)
+
+var dict = Dictionary<Int, String>()
+dict.count
+dict.capacity
+dict.isEmpty
+
+dict[1]
+dict[1] = "One"
+dict[1]
+dict[3] = "Three"
+dict.count
+dict.isEmpty
+
+dict[2] = "Two"
+dict.updateValue("Three", forKey: 4)
+print(dict)
+dict.updateValue("Nono", forKey: 4)
+print(dict)
+dict[4]
+dict[4] = "YYY"
+
+//dict[1] = nil
+dict[1]
+// dict.removeAll()
+//var group = dict.removeValue(forKey: 2)
+//print(group)
+//var dict8 = dict.popFirst()
+//dict8
+
+dict.randomElement()
+dict.contains {key, value in
+    return key == 1 && value == "One"
+}
+
+for (key, value) in dict {
+print ("in key: \(key), lay value: \(value)")
+}
+
+for value in dict.values {
+    print(value)
+}

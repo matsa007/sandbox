@@ -2,7 +2,7 @@
 //  CalculatorLogic.swift
 //  Calculator
 //
-//  Created by Nickolai Nikishin on 13.11.21.
+//  Created by Sergey Matveenko on 13.11.21.
 //
 
 import Foundation
