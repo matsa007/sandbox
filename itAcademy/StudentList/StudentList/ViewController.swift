@@ -29,23 +29,21 @@ class ViewController: UIViewController {
                            "Сандова Галина Александровна",
                            "Елисеева Марина Михайловна"] // Массив женщины
     
-    var dataSourceTotal = ["Aртимович Игорь Владимирович",
-                            "Богданович Дмитрий Александрович",
-                            "Гришин Павел Андреевич",
-                            "Куклицкий Максим Сергеевич",
-                            "Лапин Николай Владимирович",
-                            "Малишевский Никита Валерьевич",
-                            "Матвеенко Сергей Александрови",
-                            "Мостовой Алексей Алексеевич",
-                            "Пачковский Михаил Тадеушевич",
-                            "Савков Александр Геннадьевич",
-                            "Симонов Владислав Дмитриевич",
-                            "Сысов Валерий Александрович",
-                            "Букаренко Арина Олеговна",
-                            "Ефименко Анастасия Владимировна",
-                            "Пернацкая Алеся Юрьевна",
-                            "Сандова Галина Александровна",
-                            "Елисеева Марина Михайловна"] // Массив мужчины и женщины
+    
+    let sections = [["Aртимович Игорь Владимирович","Богданович Дмитрий Александрович",
+                     "Гришин Павел Андреевич",
+                     "Куклицкий Максим Сергеевич",
+                     "Лапин Николай Владимирович",
+                     "Малишевский Никита Валерьевич",
+                     "Матвеенко Сергей Александрови",
+                     "Мостовой Алексей Алексеевич",
+                     "Пачковский Михаил Тадеушевич",
+                     "Савков Александр Геннадьевич",
+                     "Симонов Владислав Дмитриевич",
+                     "Сысов Валерий Александрович"],["Букаренко Арина Олеговна","Ефименко Анастасия Владимировна",
+                                                     "Пернацкая Алеся Юрьевна",
+                                                     "Сандова Галина Александровна",
+                                                     "Елисеева Марина Михайловна"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +62,7 @@ extension ViewController: UITableViewDataSource {
         case 1: return dataSourceWomen.count
         default: break
         }
-        return dataSourceTotal.count
+        return dataSourceMen.count + dataSourceWomen.count
     } //Кол-во рядов в секциях для мужчин и женщин
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -79,13 +77,13 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath) as! StudentCell
-        if indexPath.row <= dataSourceMen.count {
-                cell.nameLabel.text = dataSourceTotal[indexPath.row]
-        }
-        else {
-                cell.nameLabel.text = dataSourceWomen[indexPath.row]
-        }
-       return cell
+        if indexPath.section == 0{
+            cell.textLabel?.text = sections[indexPath.section][indexPath.row]
+                }
+        if indexPath.section == 1{
+            cell.textLabel?.text = sections[indexPath.section][indexPath.row]
+                }
+        return cell
         }
     
 }
