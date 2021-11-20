@@ -29,7 +29,6 @@ class ViewController: UIViewController {
                            "Пернацкая Алеся Юрьевна",
                            "Сандова Галина Александровна"] // Массив женщины
     
-    
     var sections = [["Aртимович Игорь Владимирович",
                      "Богданович Дмитрий Александрович",
                      "Гришин Павел Андреевич",
@@ -47,16 +46,14 @@ class ViewController: UIViewController {
                                                      "Пернацкая Алеся Юрьевна",
                                                      "Сандова Галина Александровна"]]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
 
-
 extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return sections.count
     } //Кол-во секций - 2
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,7 +74,6 @@ extension ViewController: UITableViewDataSource {
         return "\(section)"
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath) as! StudentCell
         if indexPath.section == 0{
@@ -88,5 +84,4 @@ extension ViewController: UITableViewDataSource {
                 }
         return cell
         }
-    
 }
