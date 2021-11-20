@@ -21,30 +21,17 @@ class ViewController: UIViewController {
                          "Пачковский Михаил Тадеушевич",
                          "Савков Александр Геннадьевич",
                          "Симонов Владислав Дмитриевич",
-                         "Сысов Валерий Александрович"] // Массив мужчины
+                         "Сысов Валерий Александрович"].sorted() // Массив мужчины
     
     var dataSourceWomen = ["Букаренко Арина Олеговна",
                            "Елисеева Марина Михайловна",
                            "Ефименко Анастасия Владимировна",
                            "Пернацкая Алеся Юрьевна",
-                           "Сандова Галина Александровна"] // Массив женщины
+                           "Сандова Галина Александровна"].sorted() // Массив женщины
     
-    var sections = [["Aртимович Игорь Владимирович",
-                     "Богданович Дмитрий Александрович",
-                     "Гришин Павел Андреевич",
-                     "Куклицкий Максим Сергеевич",
-                     "Лапин Николай Владимирович",
-                     "Малишевский Никита Валерьевич",
-                     "Матвеенко Сергей Александрови",
-                     "Мостовой Алексей Алексеевич",
-                     "Пачковский Михаил Тадеушевич",
-                     "Савков Александр Геннадьевич",
-                     "Симонов Владислав Дмитриевич",
-                     "Сысов Валерий Александрович"],["Букаренко Арина Олеговна",
-                                                     "Елисеева Марина Михайловна",
-                                                     "Ефименко Анастасия Владимировна",
-                                                     "Пернацкая Алеся Юрьевна",
-                                                     "Сандова Галина Александровна"]]
+    lazy var sections = {
+        return [dataSourceMen,dataSourceWomen]
+    } ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,12 +44,7 @@ extension ViewController: UITableViewDataSource {
     } //Кол-во секций - 2
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0: return dataSourceMen.count
-        case 1: return dataSourceWomen.count
-        default: break
-        }
-        return dataSourceMen.count + dataSourceWomen.count
+        return sections[section].count
     } //Кол-во рядов в секциях для мужчин и женщин
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
