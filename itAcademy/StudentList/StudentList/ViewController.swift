@@ -10,6 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    let searchController = UISearchController ()
+    
+    
     var dataSourceMen = ["Aртимович Игорь Владимирович",
                          "Богданович Дмитрий Александрович",
                          "Гришин Павел Андреевич",
@@ -35,6 +38,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+            navigationItem.searchController = searchController
     }
 }
 
@@ -67,3 +71,6 @@ extension ViewController: UITableViewDataSource {
         return cell
         }
 }
+
+
+
