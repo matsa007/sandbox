@@ -35,28 +35,49 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         var filDataM: [String] = []
-        filDataM = dataSourceMen + dataSourceWomen
+        filDataM = dataSourceMen
 
+        var filDataW: [String] = []
+        filDataW = dataSourceWomen
+        
         if searchText.isEmpty == false {
-            filDataM = (dataSourceMen + dataSourceWomen).filter({ $0.contains(searchText) })
+            filDataM = (dataSourceMen).filter({ $0.contains(searchText) })
+            dataSourceMen = filDataM
+            filDataW = (dataSourceWomen).filter({ $0.contains(searchText) })
+            dataSourceWomen = filDataW
+            
+        } else {
+            filDataM = dataSourceMen
+            filDataW = dataSourceWomen
         }
-
+       
         tableView.reloadData()
-    print(filDataM)
+        
+        
+        
+    
         
     }
     
    
     
+    
+    
+    
+    
     lazy var sections = {
         return [dataSourceMen,dataSourceWomen]
     } ()
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
+        searchController.viewDidLoad()
+       
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -65,14 +86,13 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
         }
         
         let vc = searchController.searchResultsController as? ResultsViewController
-        vc?.view.backgroundColor = .lightText
+        vc?.view.backgroundColor = nil
         
        
-        
-        
         print(text)
     }
 }
+
 
 extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -102,6 +122,9 @@ extension ViewController: UITableViewDataSource {
                 }
         return cell
         }
+    
+    
 }
+
 
 
