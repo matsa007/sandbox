@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate {
     @IBOutlet weak var tableView: UITableView!
     
-    let searchController = UISearchController ()
+    let searchController = UISearchController (searchResultsController: ResultsViewController())
     
     
     var dataSourceMen = ["Aртимович Игорь Владимирович",
@@ -38,7 +38,24 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            navigationItem.searchController = searchController
+        searchController.searchBar.delegate = self
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {
+            return
+        }
+        
+        let vc = searchController.searchResultsController as? ResultsViewController
+        vc?.view.backgroundColor = .lightText
+        
+        let lower = text
+        var filteredInterestArray = dataSourceMen.filter({$0.data.hasPrefix(lower)})
+        
+        
+        print(text)
     }
 }
 
@@ -71,6 +88,5 @@ extension ViewController: UITableViewDataSource {
         return cell
         }
 }
-
 
 

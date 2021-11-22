@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4985C94D274ADB580060B750 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985C94C274ADB580060B750 /* ResultsViewController.swift */; };
 		D2459ED0274425A100546CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2459ECF274425A100546CC8 /* AppDelegate.swift */; };
 		D2459ED2274425A100546CC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2459ED1274425A100546CC8 /* SceneDelegate.swift */; };
 		D2459ED4274425A100546CC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2459ED3274425A100546CC8 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4985C94C274ADB580060B750 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		D2459ECC274425A100546CC8 /* StudentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2459ECF274425A100546CC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2459ED1274425A100546CC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				D2459ECF274425A100546CC8 /* AppDelegate.swift */,
 				D2459ED1274425A100546CC8 /* SceneDelegate.swift */,
 				D2459ED3274425A100546CC8 /* ViewController.swift */,
+				4985C94C274ADB580060B750 /* ResultsViewController.swift */,
 				D2459EE32744277C00546CC8 /* StudentCell.swift */,
 				D2459ED5274425A100546CC8 /* Main.storyboard */,
 				D2459ED8274425A300546CC8 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 				D2459ED4274425A100546CC8 /* ViewController.swift in Sources */,
 				D2459ED0274425A100546CC8 /* AppDelegate.swift in Sources */,
 				D2459ED2274425A100546CC8 /* SceneDelegate.swift in Sources */,
+				4985C94D274ADB580060B750 /* ResultsViewController.swift in Sources */,
 				D2459EE42744277C00546CC8 /* StudentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
