@@ -32,6 +32,22 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
                            "Пернацкая Алеся Юрьевна",
                            "Сандова Галина Александровна"].sorted(by: {$1 > $0}) // Массив женщины
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        var filDataM: [String] = []
+        filDataM = dataSourceMen + dataSourceWomen
+
+        if searchText.isEmpty == false {
+            filDataM = (dataSourceMen + dataSourceWomen).filter({ $0.contains(searchText) })
+        }
+
+        tableView.reloadData()
+    print(filDataM)
+        
+    }
+    
+   
+    
     lazy var sections = {
         return [dataSourceMen,dataSourceWomen]
     } ()
@@ -51,8 +67,7 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
         let vc = searchController.searchResultsController as? ResultsViewController
         vc?.view.backgroundColor = .lightText
         
-        let lower = text
-        var filteredInterestArray = dataSourceMen.filter({$0.data.hasPrefix(lower)})
+       
         
         
         print(text)
