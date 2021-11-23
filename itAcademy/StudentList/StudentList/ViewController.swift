@@ -44,7 +44,6 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
         } else {
             sections = {[dataSourceMen,dataSourceWomen]} ()
         }
-        
         tableView.reloadData()
     }
     
@@ -81,8 +80,8 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section{
-        case 0: return "Мужчины: \(dataSourceMen.count) человек"
-        case 1: return "Женщины: \(dataSourceWomen.count) человек"
+        case 0: return "Мужчины: \(sections[section].count) человек"
+        case 1: return "Женщины: \(sections[section].count) человек"
         default: break
         }
         return "\(section)"
