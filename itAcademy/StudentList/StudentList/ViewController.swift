@@ -80,7 +80,6 @@ extension ViewController: UITableViewDataSource {
     } //Кол-во рядов в секциях для мужчин и женщин
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        print(dataSourceMen)
         switch section{
         case 0: return "Мужчины: \(dataSourceMen.count) человек"
         case 1: return "Женщины: \(dataSourceWomen.count) человек"
