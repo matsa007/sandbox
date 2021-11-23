@@ -12,7 +12,6 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
     
     let searchController = UISearchController (searchResultsController: ResultsViewController())
     
-    
     var dataSourceMen = ["Aртимович Игорь Владимирович",
                          "Богданович Дмитрий Александрович",
                          "Гришин Павел Андреевич",
@@ -50,26 +49,12 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
             filDataM = dataSourceMen
             filDataW = dataSourceWomen
         }
-       
         tableView.reloadData()
-        
-        
-        
-    
-        
     }
-    
-   
-    
-    
-    
-    
     
     lazy var sections = {
         return [dataSourceMen,dataSourceWomen]
     } ()
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,22 +62,17 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
         searchController.viewDidLoad()
-       
     }
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else {
             return
         }
-        
         let vc = searchController.searchResultsController as? ResultsViewController
         vc?.view.backgroundColor = nil
-        
-       
         print(text)
     }
 }
-
 
 extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -122,8 +102,6 @@ extension ViewController: UITableViewDataSource {
                 }
         return cell
         }
-    
-    
 }
 
 
