@@ -18,7 +18,7 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
                          "Куклицкий Максим Сергеевич",
                          "Лапин Николай Владимирович",
                          "Малишевский Никита Валерьевич",
-                         "Матвеенко Сергей Александрови",
+                         "Матвеенко Сергей Александрович",
                          "Мостовой Алексей Алексеевич",
                          "Пачковский Михаил Тадеушевич",
                          "Савков Александр Геннадьевич",
@@ -34,24 +34,17 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         var filDataM: [String] = []
-        filDataM = dataSourceMen
-
         var filDataW: [String] = []
-        filDataW = dataSourceWomen
         
         if searchText.isEmpty == false {
             filDataM = (dataSourceMen).filter({ $0.contains(searchText) })
-            dataSourceMen = filDataM
             filDataW = (dataSourceWomen).filter({ $0.contains(searchText) })
-            dataSourceWomen = filDataW
-        
-            sections = {
-                [dataSourceMen,dataSourceWomen]} ()
+            sections = {[filDataM,filDataW]} ()
+            
         } else {
-            filDataM = dataSourceMen
-            filDataW = dataSourceWomen
-            tableView.reloadData()
+            sections = {[dataSourceMen,dataSourceWomen]} ()
         }
+        
         tableView.reloadData()
     }
     
@@ -87,6 +80,7 @@ extension ViewController: UITableViewDataSource {
     } //Кол-во рядов в секциях для мужчин и женщин
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        print(dataSourceMen)
         switch section{
         case 0: return "Мужчины: \(dataSourceMen.count) человек"
         case 1: return "Женщины: \(dataSourceWomen.count) человек"
