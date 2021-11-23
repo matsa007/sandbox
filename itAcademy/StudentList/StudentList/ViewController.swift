@@ -50,7 +50,7 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
     lazy var sections = {
         return [dataSourceMen,dataSourceWomen]
     } ()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchController.searchBar.delegate = self
@@ -91,12 +91,12 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath) as! StudentCell
         if indexPath.section == 0{
             cell.textLabel?.text = sections[indexPath.section][indexPath.row]
-                }
+        }
         if indexPath.section == 1{
             cell.textLabel?.text = sections[indexPath.section][indexPath.row]
-                }
-        return cell
         }
+        return cell
+    }
 }
 
 
