@@ -44,10 +44,13 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
             dataSourceMen = filDataM
             filDataW = (dataSourceWomen).filter({ $0.contains(searchText) })
             dataSourceWomen = filDataW
-            
+        
+            sections = {
+                [dataSourceMen,dataSourceWomen]} ()
         } else {
             filDataM = dataSourceMen
             filDataW = dataSourceWomen
+            tableView.reloadData()
         }
         tableView.reloadData()
     }
@@ -55,7 +58,7 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
     lazy var sections = {
         return [dataSourceMen,dataSourceWomen]
     } ()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         searchController.searchBar.delegate = self
