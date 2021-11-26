@@ -59,6 +59,7 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
         searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
@@ -115,7 +116,7 @@ extension ViewController: UITableViewDelegate {
         } else {
             name = dataSourceWomen[indexPath.row]
         }
-        print("selected: ")
+        print("selected: \(name)")
     }
     
 }

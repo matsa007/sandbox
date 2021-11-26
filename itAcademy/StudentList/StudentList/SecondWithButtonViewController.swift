@@ -17,8 +17,8 @@ class SecondWithButtonViewController: UIViewController {
 }
 
 extension SecondWithButtonViewController: VCDelegate {
-    func selectedStudent (_ student: String) {
-        selectButton.setTitle(student, for: .normal)
+    func selectedStudent (_ name: String) {
+        selectButton.setTitle(name, for: .normal)
     }
     
 }
