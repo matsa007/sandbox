@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol VCDelegate {
+    func selectedStudent (_ student: String)
+}
+
 class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate {
     @IBOutlet weak var tableView: UITableView!
+    
+    var delegateS: VCDelegate?
     
     let searchController = UISearchController (searchResultsController: ResultsViewController())
     
@@ -89,15 +95,28 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath) as! StudentCell
-        if indexPath.section == 0{
+        if indexPath.section == 0 {
             cell.textLabel?.text = sections[indexPath.section][indexPath.row]
         }
-        if indexPath.section == 1{
+        if indexPath.section == 1 {
             cell.textLabel?.text = sections[indexPath.section][indexPath.row]
         }
         return cell
     }
 }
 
-
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let name:String
+        if indexPath.section == 0 {
+            name = dataSourceMen[indexPath.row]
+        } else {
+            name = dataSourceWomen[indexPath.row]
+        }
+        print("selected: ")
+    }
+    
+}
 
