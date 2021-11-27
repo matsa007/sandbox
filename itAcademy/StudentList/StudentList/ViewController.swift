@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol VCDelegate {
+protocol VCDelegate:AnyObject {
     func selectedStudent (_ student: String)
 }
 
 class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate {
     @IBOutlet weak var tableView: UITableView!
     
-    var delegateS: VCDelegate?
+    weak var delegate: VCDelegate?
     
     let searchController = UISearchController (searchResultsController: ResultsViewController())
     
@@ -107,7 +107,6 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let name:String
@@ -116,8 +115,8 @@ extension ViewController: UITableViewDelegate {
         } else {
             name = dataSourceWomen[indexPath.row]
         }
-        print("selected: \(name)")
+        delegate?.selectedStudent(name)
+        dismiss(animated: true, completion: nil)
     }
-    
 }
 

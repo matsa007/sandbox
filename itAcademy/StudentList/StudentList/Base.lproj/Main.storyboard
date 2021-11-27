@@ -88,6 +88,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="selBT:" destination="7Dt-3C-knw" eventType="touchUpInside" id="8iR-bT-RhT"/>
                                     <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="fQa-E6-2YY" id="wLK-uw-AWh">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
