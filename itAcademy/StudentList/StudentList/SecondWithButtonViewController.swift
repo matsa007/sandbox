@@ -9,12 +9,10 @@ import UIKit
 
 class SecondWithButtonViewController: UIViewController {
     
-
     @IBOutlet weak var selectButton: UIButton!
+    @IBAction func selBT(_ sender: Any) {}
     
-    @IBAction func selBT(_ sender: Any) {
-        
-    }
+    var dataSourceNew = Set<String> ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +25,16 @@ class SecondWithButtonViewController: UIViewController {
     }
 }
 
+
+
 extension SecondWithButtonViewController: VCDelegate {
-    func selectedStudent (_ student: String) {
-        selectButton.setTitle(student, for: .normal)
-        print("title - \(student)")
-        print("dscsc")
-        return title = student
+    func selectedStudent (_ name: String) {
+        selectButton.setTitle(name, for: .normal)
+        print("title - \(name)")
+        dataSourceNew.update(with: name)
+        print(dataSourceNew)
+        return title = name
     }
 }
+
+

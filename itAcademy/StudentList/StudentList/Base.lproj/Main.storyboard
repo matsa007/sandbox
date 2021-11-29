@@ -80,7 +80,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQa-E6-2YY">
-                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
+                                <rect key="frame" x="173.5" y="811" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" titleAlignment="automatic">
                                     <attributedString key="attributedTitle">
@@ -98,8 +98,8 @@
                         <viewLayoutGuide key="safeArea" id="Zvw-kp-0pk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fQa-E6-2YY" firstAttribute="centerX" secondItem="2cD-KX-2qI" secondAttribute="centerX" id="Hxh-1O-ywc"/>
-                            <constraint firstItem="fQa-E6-2YY" firstAttribute="centerY" secondItem="2cD-KX-2qI" secondAttribute="centerY" id="WIT-wW-5je"/>
+                            <constraint firstItem="Zvw-kp-0pk" firstAttribute="bottom" secondItem="fQa-E6-2YY" secondAttribute="bottom" constant="20" id="cVp-mQ-D3N"/>
+                            <constraint firstItem="fQa-E6-2YY" firstAttribute="centerX" secondItem="2cD-KX-2qI" secondAttribute="centerX" id="xgc-1y-5w0"/>
                         </constraints>
                     </view>
                     <connections>
