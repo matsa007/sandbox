@@ -54,5 +54,18 @@ extension SecondWithButtonViewController: UITableViewDataSource {
         cell.secondNameLabel!.text = dataSourceNew[indexPath.row]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            secondTableView.beginUpdates()
+            dataSourceNew.remove(at: indexPath.row)
+            secondTableView.deleteRows(at: [indexPath], with: .fade)
+            secondTableView.endUpdates()
+        }
+    }
 }
 
