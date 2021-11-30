@@ -94,15 +94,54 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nyH-Da-Znc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="747"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondCell" id="hgg-Zm-fp6" customClass="SecondStudentCell" customModule="StudentList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hgg-Zm-fp6" id="jY1-Aj-8fC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2c-JZ-Hlj">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="W2c-JZ-Hlj" firstAttribute="leading" secondItem="jY1-Aj-8fC" secondAttribute="leadingMargin" id="Vvt-We-xip"/>
+                                                <constraint firstItem="W2c-JZ-Hlj" firstAttribute="top" secondItem="jY1-Aj-8fC" secondAttribute="topMargin" id="bNW-Th-0m0"/>
+                                                <constraint firstItem="W2c-JZ-Hlj" firstAttribute="bottom" secondItem="jY1-Aj-8fC" secondAttribute="bottomMargin" id="i6l-ZS-ydG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="W2c-JZ-Hlj" secondAttribute="trailing" id="igq-ck-an4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="secondNameLabel" destination="W2c-JZ-Hlj" id="deh-Uq-cQr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zvw-kp-0pk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fQa-E6-2YY" firstAttribute="top" secondItem="nyH-Da-Znc" secondAttribute="bottom" constant="20" id="2oA-WP-L77"/>
+                            <constraint firstItem="nyH-Da-Znc" firstAttribute="leading" secondItem="Zvw-kp-0pk" secondAttribute="leading" id="JEZ-0r-YpE"/>
+                            <constraint firstItem="nyH-Da-Znc" firstAttribute="top" secondItem="Zvw-kp-0pk" secondAttribute="top" id="Mkd-D9-xop"/>
+                            <constraint firstItem="nyH-Da-Znc" firstAttribute="leading" secondItem="Zvw-kp-0pk" secondAttribute="leading" id="PCI-ca-aDz"/>
+                            <constraint firstItem="fQa-E6-2YY" firstAttribute="top" secondItem="nyH-Da-Znc" secondAttribute="bottom" constant="20" id="PRw-54-I2F"/>
+                            <constraint firstItem="Zvw-kp-0pk" firstAttribute="trailing" secondItem="nyH-Da-Znc" secondAttribute="trailing" id="RTO-Hi-Wo4"/>
+                            <constraint firstItem="nyH-Da-Znc" firstAttribute="trailing" secondItem="Zvw-kp-0pk" secondAttribute="trailing" id="TDc-51-poU"/>
                             <constraint firstItem="Zvw-kp-0pk" firstAttribute="bottom" secondItem="fQa-E6-2YY" secondAttribute="bottom" constant="20" id="cVp-mQ-D3N"/>
                             <constraint firstItem="fQa-E6-2YY" firstAttribute="centerX" secondItem="2cD-KX-2qI" secondAttribute="centerX" id="xgc-1y-5w0"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="secondTableView" destination="nyH-Da-Znc" id="xhR-KP-zpX"/>
                         <outlet property="selectButton" destination="fQa-E6-2YY" id="ySN-Pu-UOB"/>
                     </connections>
                 </viewController>

@@ -7,15 +7,18 @@
 
 import UIKit
 
-class SecondWithButtonViewController: UIViewController {
+class SecondWithButtonViewController: UIViewController, UITableViewDelegate {
+    @IBOutlet weak var secondTableView: UITableView!
     
     @IBOutlet weak var selectButton: UIButton!
     @IBAction func selBT(_ sender: Any) {}
     
-    var dataSourceNew = Set<String> ()
-    
+    var dataSourceNew: [String] = ["1","2","3"]
+       
     override func viewDidLoad() {
         super.viewDidLoad()
+        secondTableView.delegate = self
+        secondTableView.dataSource = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -25,16 +28,27 @@ class SecondWithButtonViewController: UIViewController {
     }
 }
 
-
-
 extension SecondWithButtonViewController: VCDelegate {
     func selectedStudent (_ name: String) {
         selectButton.setTitle(name, for: .normal)
         print("title - \(name)")
-        dataSourceNew.update(with: name)
+        dataSourceNew.append(name)
         print(dataSourceNew)
         return title = name
     }
 }
 
+extension SecondWithButtonViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSourceNew.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = secondTableView.dequeueReusableCell(withIdentifier: "SecondCell", for: indexPath) as! SecondStudentCell
+        
+        cell.secondNameLabel!.text = dataSourceNew[indexPath.row]
+        return cell
+    }
+}
 

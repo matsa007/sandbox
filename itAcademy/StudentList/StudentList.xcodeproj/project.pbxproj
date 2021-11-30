@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49250707275623C600BD3F30 /* SecondStudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49250706275623C600BD3F30 /* SecondStudentCell.swift */; };
 		498BD71C274D24C6009A704E /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BD71B274D24C6009A704E /* ResultsViewController.swift */; };
 		49B70A67275155560073BECB /* SecondWithButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B70A66275155560073BECB /* SecondWithButtonViewController.swift */; };
 		D2459ED0274425A100546CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2459ECF274425A100546CC8 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49250706275623C600BD3F30 /* SecondStudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStudentCell.swift; sourceTree = "<group>"; };
 		498BD71B274D24C6009A704E /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		49B70A66275155560073BECB /* SecondWithButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondWithButtonViewController.swift; sourceTree = "<group>"; };
 		D2459ECC274425A100546CC8 /* StudentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				D2459EE32744277C00546CC8 /* StudentCell.swift */,
 				D2459ED5274425A100546CC8 /* Main.storyboard */,
 				49B70A66275155560073BECB /* SecondWithButtonViewController.swift */,
+				49250706275623C600BD3F30 /* SecondStudentCell.swift */,
 				D2459ED8274425A300546CC8 /* Assets.xcassets */,
 				D2459EDA274425A300546CC8 /* LaunchScreen.storyboard */,
 				D2459EDD274425A300546CC8 /* Info.plist */,
@@ -149,6 +152,7 @@
 			files = (
 				49B70A67275155560073BECB /* SecondWithButtonViewController.swift in Sources */,
 				D2459ED4274425A100546CC8 /* ViewController.swift in Sources */,
+				49250707275623C600BD3F30 /* SecondStudentCell.swift in Sources */,
 				D2459ED0274425A100546CC8 /* AppDelegate.swift in Sources */,
 				D2459ED2274425A100546CC8 /* SceneDelegate.swift in Sources */,
 				498BD71C274D24C6009A704E /* ResultsViewController.swift in Sources */,
