@@ -12,7 +12,7 @@ class SecondWithButtonViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var selectButton: UIButton!
     @IBAction func selBT(_ sender: Any) {}
-    
+
     var dataSourceNew: [String] = [] {
         didSet {
             secondTableView.reloadData()
@@ -36,8 +36,10 @@ extension SecondWithButtonViewController: VCDelegate {
     func selectedStudent(_ name: String) {
         selectButton.setTitle(name, for: .normal)
         print("title - \(name)")
-        dataSourceNew.append(name)
-        
+        if dataSourceNew.contains(name) == false {
+            dataSourceNew.append(name)
+        }
+        print(dataSourceNew)
     }
 }
 
