@@ -66,5 +66,21 @@ extension SecondWithButtonViewController: UITableViewDataSource {
             secondTableView.endUpdates()
         }
     }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+         return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        dataSourceNew.swapAt(sourceIndexPath.row, destinationIndexPath.row)
+    }
+    
+    @IBAction func didTapSort () {
+        if secondTableView.isEditing {
+            secondTableView.isEditing = false
+        } else {
+            secondTableView.isEditing = true
+        }
+    }
 }
 
