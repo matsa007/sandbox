@@ -13,7 +13,11 @@ class SecondWithButtonViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var selectButton: UIButton!
     @IBAction func selBT(_ sender: Any) {}
     
-    var dataSourceNew: [String] = ["1","2","3"]
+    var dataSourceNew: [String] = [] {
+        didSet {
+            secondTableView.reloadData()
+        }
+    }
        
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,17 +33,15 @@ class SecondWithButtonViewController: UIViewController, UITableViewDelegate {
 }
 
 extension SecondWithButtonViewController: VCDelegate {
-    func selectedStudent (_ name: String) {
+    func selectedStudent(_ name: String) {
         selectButton.setTitle(name, for: .normal)
         print("title - \(name)")
         dataSourceNew.append(name)
-        print(dataSourceNew)
-        return title = name
+        
     }
 }
 
 extension SecondWithButtonViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSourceNew.count
     }
