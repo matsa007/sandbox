@@ -8,8 +8,8 @@
 import UIKit
 
 class SecondWithButtonViewController: UIViewController, UITableViewDelegate {
-    @IBOutlet weak var secondTableView: UITableView!
     
+    @IBOutlet weak var secondTableView: UITableView!
     @IBOutlet weak var selectButton: UIButton!
     @IBAction func selBT(_ sender: Any) {}
 
@@ -39,7 +39,6 @@ extension SecondWithButtonViewController: VCDelegate {
         if dataSourceNew.contains(name) == false {
             dataSourceNew.append(name)
         }
-        print(dataSourceNew)
     }
 }
 

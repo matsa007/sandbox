@@ -45,6 +45,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4925070827565E0400BD3F30 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D2459EE32744277C00546CC8 /* StudentCell.swift */,
+				49250706275623C600BD3F30 /* SecondStudentCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4925070927565FF700BD3F30 /* MyViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2459ED3274425A100546CC8 /* ViewController.swift */,
+				49B70A66275155560073BECB /* SecondWithButtonViewController.swift */,
+				498BD71B274D24C6009A704E /* ResultsViewController.swift */,
+			);
+			path = MyViewControllers;
+			sourceTree = "<group>";
+		};
 		D2459EC3274425A000546CC8 = {
 			isa = PBXGroup;
 			children = (
@@ -66,11 +85,8 @@
 			children = (
 				D2459ECF274425A100546CC8 /* AppDelegate.swift */,
 				D2459ED1274425A100546CC8 /* SceneDelegate.swift */,
-				D2459ED3274425A100546CC8 /* ViewController.swift */,
-				49B70A66275155560073BECB /* SecondWithButtonViewController.swift */,
-				498BD71B274D24C6009A704E /* ResultsViewController.swift */,
-				D2459EE32744277C00546CC8 /* StudentCell.swift */,
-				49250706275623C600BD3F30 /* SecondStudentCell.swift */,
+				4925070927565FF700BD3F30 /* MyViewControllers */,
+				4925070827565E0400BD3F30 /* Cells */,
 				D2459ED5274425A100546CC8 /* Main.storyboard */,
 				D2459ED8274425A300546CC8 /* Assets.xcassets */,
 				D2459EDA274425A300546CC8 /* LaunchScreen.storyboard */,

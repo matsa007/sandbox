@@ -79,7 +79,7 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
 extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
-    } //Кол-во секций - 2
+    } //Кол-во секций
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].count
