@@ -35,7 +35,7 @@ class ViewController: UIViewController, UISearchResultsUpdating, UISearchBarDele
                            "Елисеева Марина Михайловна",
                            "Ефименко Анастасия Владимировна",
                            "Пернацкая Алеся Юрьевна",
-                           "Сандова Галина Александровна"].sorted(by: {$1 > $0}) // Массив женщины
+                           "Сандова Галина Александровна"].sorted(by: < ) // Массив женщины
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
