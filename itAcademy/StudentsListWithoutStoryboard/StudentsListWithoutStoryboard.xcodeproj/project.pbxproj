@@ -14,6 +14,7 @@
 		4907B01C275BDC020047793E /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4907B01B275BDC020047793E /* StudentViewController.swift */; };
 		4907B020275BDC680047793E /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4907B01F275BDC680047793E /* StudentCell.swift */; };
 		4907B022275BDD990047793E /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4907B021275BDD990047793E /* DataSource.swift */; };
+		496F2BB6275FA10F006B7E46 /* MemoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496F2BB5275FA10F006B7E46 /* MemoryManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4907B01B275BDC020047793E /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 		4907B01F275BDC680047793E /* StudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
 		4907B021275BDD990047793E /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		496F2BB5275FA10F006B7E46 /* MemoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				4907B007275BDAA30047793E /* AppDelegate.swift */,
 				4907B009275BDAA30047793E /* SceneDelegate.swift */,
 				4907B01B275BDC020047793E /* StudentViewController.swift */,
+				496F2BB5275FA10F006B7E46 /* MemoryManager.swift */,
 				4907B01F275BDC680047793E /* StudentCell.swift */,
 				4907B021275BDD990047793E /* DataSource.swift */,
 				4907B010275BDAA50047793E /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			files = (
 				4907B022275BDD990047793E /* DataSource.swift in Sources */,
 				4907B01C275BDC020047793E /* StudentViewController.swift in Sources */,
+				496F2BB6275FA10F006B7E46 /* MemoryManager.swift in Sources */,
 				4907B008275BDAA30047793E /* AppDelegate.swift in Sources */,
 				4907B00A275BDAA30047793E /* SceneDelegate.swift in Sources */,
 				4907B020275BDC680047793E /* StudentCell.swift in Sources */,

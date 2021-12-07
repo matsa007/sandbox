@@ -21,9 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let vc = StudentViewController()
         vc.shouldAddSelectButton = true
         vc.shouldAddSearchBar = true
-        vc.men = []
-        vc.women = []
-                
+        let memoryManager = Memory()
+        vc.men = memoryManager.loadMen()
+        vc.women = memoryManager.loadWomen()
+       
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
 

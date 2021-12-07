@@ -13,6 +13,8 @@ protocol StudentViewControllerDelegate: AnyObject {
 
 class StudentViewController: UIViewController {
     
+    var memoryManager = Memory()
+    
     private lazy var tableView = UITableView()
     private lazy var selectButton = UIButton(type: .custom)
     private lazy var searchBar = UISearchBar()
@@ -59,6 +61,10 @@ class StudentViewController: UIViewController {
         }
         
         setupTableView()
+    }
+    
+    private func saveData () {
+        memoryManager.saveData(menList: men, womenList: women)
     }
     
     private func setupTableView() {
@@ -216,10 +222,12 @@ extension StudentViewController: UITableViewDelegate {
             if indexPath.section == 0 {
                 if let index = men.firstIndex(of: nameToDelete) {
                     men.remove(at: index)
+                    saveData ()
                 }
             } else {
                 if let index = women.firstIndex(of: nameToDelete) {
                     women.remove(at: index)
+                    saveData ()
                 }
             }
             
@@ -264,8 +272,10 @@ extension StudentViewController: StudentViewControllerDelegate {
         
         if gender == 0 {
             men.append(student)
+            saveData ()
         } else {
             women.append(student)
+            saveData ()
         }
         
         reloadFilterData()
