@@ -55,11 +55,10 @@ class StudentViewController: UIViewController {
         if shouldAddSearchBar {
             setupSearchBar()
         }
-        
+
         if shouldAddSelectButton {
             setupSelectButton()
         }
-        
         setupTableView()
     }
     
@@ -70,7 +69,6 @@ class StudentViewController: UIViewController {
     private func setupTableView() {
         tableView.keyboardDismissMode = .onDrag
         tableView.register(StudentCell.self, forCellReuseIdentifier: "StudentCell")
-        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
@@ -97,7 +95,6 @@ class StudentViewController: UIViewController {
             selectButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             selectButton.heightAnchor.constraint(equalToConstant: 40)
         ])
-        
         selectButton.addTarget(self, action: #selector(selectButtonTapped), for: .touchUpInside)
     }
     
@@ -277,7 +274,6 @@ extension StudentViewController: StudentViewControllerDelegate {
             women.append(student)
             saveData ()
         }
-        
         reloadFilterData()
     }
 }
