@@ -13,6 +13,7 @@
 		498DFE832761108E00E608D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498DFE812761108E00E608D0 /* Main.storyboard */; };
 		498DFE852761109000E608D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 498DFE842761109000E608D0 /* Assets.xcassets */; };
 		498DFE882761109000E608D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498DFE862761109000E608D0 /* LaunchScreen.storyboard */; };
+		498DFE9027613E0C00E608D0 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498DFE8F27613E0C00E608D0 /* Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		498DFE842761109000E608D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		498DFE872761109000E608D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		498DFE892761109000E608D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		498DFE8F27613E0C00E608D0 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				498DFE7B2761108E00E608D0 /* AppDelegate.swift */,
 				498DFE7D2761108E00E608D0 /* SceneDelegate.swift */,
 				498DFE7F2761108E00E608D0 /* ViewController.swift */,
+				498DFE8F27613E0C00E608D0 /* Alerts.swift */,
 				498DFE812761108E00E608D0 /* Main.storyboard */,
 				498DFE842761109000E608D0 /* Assets.xcassets */,
 				498DFE862761109000E608D0 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				498DFE802761108E00E608D0 /* ViewController.swift in Sources */,
 				498DFE7C2761108E00E608D0 /* AppDelegate.swift in Sources */,
+				498DFE9027613E0C00E608D0 /* Alerts.swift in Sources */,
 				498DFE7E2761108E00E608D0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
