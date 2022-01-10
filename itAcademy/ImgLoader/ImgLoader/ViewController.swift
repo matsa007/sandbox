@@ -9,8 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let firstVcButton = UIButton(type: .system)
-    let navVC = UINavigationController(rootViewController: PreviewViewController())
+    private let firstVcButton = UIButton(type: .system)
+    private let navVC = UINavigationController(rootViewController: PreviewViewController())
 
     override func viewDidLoad() {
         
@@ -25,10 +25,12 @@ class ViewController: UIViewController {
         let button = firstVcButton
         view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("dscs", for: .normal)
+        button.setTitle("Go to wallpapers =>", for: .normal)
         button.backgroundColor = .cyan
         button.setTitleColor(.darkGray, for: .normal)
         button.titleLabel!.font = .systemFont(ofSize: 15, weight: .heavy)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 15
         button.addTarget(self, action: #selector(firstVcButtonTapped), for: .touchUpInside)
                
         NSLayoutConstraint.activate([

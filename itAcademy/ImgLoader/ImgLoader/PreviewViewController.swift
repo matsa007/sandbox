@@ -9,10 +9,10 @@ import UIKit
 
 class PreviewViewController: UIViewController {
     
-    let imageView = UIImageView()
-    let imageDataSource = DataSource()
-    let backButton = UIButton(type: .system)
-    var count = 0
+    private let imageView = UIImageView()
+    private let imageDataSource = DataSource()
+    private let backButton = UIButton(type: .system)
+    private var count = 0
 
     override func viewDidLoad() {
         imageViewSetup()
@@ -28,7 +28,7 @@ class PreviewViewController: UIViewController {
         
         view.addSubview(imageZone)
         imageZone.translatesAutoresizingMaskIntoConstraints = false
-        imageZone.backgroundColor = .red
+        imageZone.backgroundColor = .lightGray
         
         NSLayoutConstraint.activate([
             imageZone.topAnchor.constraint(equalTo: view.topAnchor, constant: 75),

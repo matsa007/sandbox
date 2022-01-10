@@ -8,7 +8,7 @@
 import UIKit
 
 struct DataSource {
-    var url:Dictionary <Int, String> = [0:"https://storge.pic2.me/c/800x1360/307/609e9e70825736.46554161.jpg",
+    let url:Dictionary <Int, String> = [0:"https://storge.pic2.me/c/800x1360/307/609e9e70825736.46554161.jpg",
                                         1:"https://storge.pic2.me/c/800x1360/471/5f023a305f09e4.08289562.jpg",
                                         2:"https://storge.pic2.me/c/800x1360/919/5ebb05d49df2d.jpg",
                                         3:"https://storge.pic2.me/c/800x1360/459/5ebb05cdee9e5.jpg",
