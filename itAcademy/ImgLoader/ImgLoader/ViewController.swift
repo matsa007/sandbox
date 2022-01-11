@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    func firstVcButtonSetup() {
+    private func firstVcButtonSetup() {
         
         let button = firstVcButton
         view.addSubview(button)
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
 
 extension ViewController {
     
-    @objc func firstVcButtonTapped() {
+    @objc private func firstVcButtonTapped() {
         
         navVC.modalPresentationStyle = .fullScreen
         self.dismiss(animated: true, completion: nil)

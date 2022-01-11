@@ -22,7 +22,7 @@ class PreviewViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    func imageViewSetup() {
+    private func imageViewSetup() {
         
         let imageZone = imageView
         
@@ -38,7 +38,7 @@ class PreviewViewController: UIViewController {
         ])
     }
     
-    func backButtonSetup() {
+    private func backButtonSetup() {
         let button = backButton
         view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -58,7 +58,7 @@ class PreviewViewController: UIViewController {
         
     }
     
-    func imageViewLoadingData() {
+    private func imageViewLoadingData() {
         let url = URL(string: imageDataSource.url[0]!)
         DispatchQueue.global(qos: .userInitiated).async {
             if let data = try? Data(contentsOf: url!) {
@@ -71,13 +71,15 @@ class PreviewViewController: UIViewController {
 }
 
 extension PreviewViewController {
-    @objc func backButtonTapped() {
+    
+    @objc private func backButtonTapped() {
+        
         let firstVc = ViewController()
         self.dismiss(animated: true, completion: nil)
         self.present(firstVc, animated: true, completion: nil)
     }
     
-    @objc func changeCount() {
+    @objc private func changeCount() {
         
         if count < imageDataSource.url.count {
             count = count + 1
