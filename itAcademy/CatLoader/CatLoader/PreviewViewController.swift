@@ -13,7 +13,8 @@ class PreviewViewController: UIViewController {
     let datasrc = DataSource()
     let imageData = UIImage()
     let favoritesListButton = UIButton(type: .system)
-    let addTofavoritesListButton = UIButton(type: .custom)
+    let addTofavoritesListButton = UIButton(type: .system)
+    var favoritesCounter = 0
     
     override func viewDidLoad() {
         imageViewSetup()
@@ -30,10 +31,10 @@ class PreviewViewController: UIViewController {
 
         DispatchQueue.global(qos: .utility).async {
             let urlData = try? Data(contentsOf: urlUrl!)
-            DispatchQueue.main.async {
-            let fvc = FavoritesViewController()
-            fvc.arrayKK.append(UIImage(data: urlData!)!)
-            }
+//            DispatchQueue.main.async {
+//            let fvc = FavoritesViewController()
+//            fvc.arrayKK.append(UIImage(data: urlData!)!)
+//            }
            
             
             DispatchQueue.main.async {
@@ -81,10 +82,12 @@ class PreviewViewController: UIViewController {
     
     private func addTofavoritesListButtonSetup() {
         
-        let button = favoritesListButton
+        let button = addTofavoritesListButton
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("☆", for: .normal)
-        button.backgroundColor = .red
+        button.backgroundColor = .clear
+        button.tintColor = .red
+        button.titleLabel?.font = .systemFont(ofSize: 33)
         view.addSubview(button)
         
         
@@ -92,10 +95,10 @@ class PreviewViewController: UIViewController {
         
         
         NSLayoutConstraint.activate([
-            button.topAnchor.constraint(equalTo: view.topAnchor, constant: 400),
+            button.topAnchor.constraint(equalTo: view.topAnchor, constant: 450),
             button.leadingAnchor.constraint(equalTo: view.trailingAnchor, constant: -110),
-            button.bottomAnchor.constraint(equalTo: view.topAnchor, constant: 450),
-            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100)
+            button.bottomAnchor.constraint(equalTo: view.topAnchor, constant: 500),
+            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50)
         ])
         
     }
