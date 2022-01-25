@@ -47,7 +47,6 @@ class PreviewViewController: UIViewController {
         button.setTitleColor(.darkGray, for: .normal)
         button.titleLabel!.font = .systemFont(ofSize: 15, weight: .heavy)
         button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
-        button.addTarget(self, action: #selector(changeCount), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             button.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
@@ -59,7 +58,7 @@ class PreviewViewController: UIViewController {
     }
     
     private func imageViewLoadingData() {
-        let url = URL(string: imageDataSource.url[0]!)
+        let url = URL(string: imageDataSource.url[count]!)
         DispatchQueue.global(qos: .userInitiated).async {
             if let data = try? Data(contentsOf: url!) {
                 DispatchQueue.main.async {
@@ -74,13 +73,6 @@ extension PreviewViewController {
     
     @objc private func backButtonTapped() {
         
-        let firstVc = ViewController()
-        self.dismiss(animated: true, completion: nil)
-        self.present(firstVc, animated: true, completion: nil)
-    }
-    
-    @objc private func changeCount() {
-        
         if count < imageDataSource.url.count {
             count = count + 1
         }
@@ -88,14 +80,11 @@ extension PreviewViewController {
         if count == imageDataSource.url.count {
             count = 0
         }
-
-        let url = URL(string: imageDataSource.url[count]!)
-        DispatchQueue.global(qos: .userInitiated).async {
-            if let data = try? Data(contentsOf: url!) {
-                DispatchQueue.main.async {
-                    [weak self] in self?.imageView.image = UIImage(data: data)
-                }
-            }
-        }
+        
+        imageViewLoadingData()
+        
+        let firstVc = ViewController()
+        self.dismiss(animated: true, completion: nil)
+        self.present(firstVc, animated: true, completion: nil)
     }
 }
