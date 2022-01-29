@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		494A925D27A589F8009991B2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A925C27A589F8009991B2 /* NetworkManager.swift */; };
 		496D420E279CBBA1005228A0 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496D420D279CBBA1005228A0 /* DataSource.swift */; };
 		49936A7F279C300B00551D86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49936A7E279C300B00551D86 /* AppDelegate.swift */; };
 		49936A81279C300B00551D86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49936A80279C300B00551D86 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		494A925C27A589F8009991B2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		496D420D279CBBA1005228A0 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		49936A7B279C300B00551D86 /* CatLoader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatLoader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49936A7E279C300B00551D86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				49936A7E279C300B00551D86 /* AppDelegate.swift */,
 				49936A80279C300B00551D86 /* SceneDelegate.swift */,
 				496D420D279CBBA1005228A0 /* DataSource.swift */,
+				494A925C27A589F8009991B2 /* NetworkManager.swift */,
 				49936A82279C300B00551D86 /* ViewController.swift */,
 				49936A95279C31FF00551D86 /* PreviewViewController.swift */,
 				49936A97279C344900551D86 /* FavoritesViewController.swift */,
@@ -150,6 +153,7 @@
 				49936A83279C300B00551D86 /* ViewController.swift in Sources */,
 				49936A89279C300B00551D86 /* CatLoader.xcdatamodeld in Sources */,
 				49936A7F279C300B00551D86 /* AppDelegate.swift in Sources */,
+				494A925D27A589F8009991B2 /* NetworkManager.swift in Sources */,
 				49936A96279C31FF00551D86 /* PreviewViewController.swift in Sources */,
 				49936A98279C344900551D86 /* FavoritesViewController.swift in Sources */,
 				49936A81279C300B00551D86 /* SceneDelegate.swift in Sources */,

@@ -12,7 +12,13 @@ class FavoritesViewController: UIViewController, UITableViewDataSource {
     
     
     let tableView = UITableView()
-    lazy var arrPP = [UIImage]()
+//    lazy var arrPP = [UIImage]()
+    var arrPP:Array <UIImage> = [] {
+            didSet {
+                tableView.reloadData()
+            }
+        }
+    let backButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         
@@ -24,13 +30,31 @@ class FavoritesViewController: UIViewController, UITableViewDataSource {
         view.backgroundColor = .purple
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        backButtonSetup()
         super.viewDidLoad()
         
     }
     
+    
+    func backButtonSetup() {
+        let button = backButton
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("<= Back to Cats", for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 15
+        button.backgroundColor = .green
+        button.tintColor = .white
+        button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        view.addSubview(button)
+        
+        
+    }
+    
+    
+    
     func tableViewSetup() {
         view.addSubview(tableView)
-        
+        tableView.reloadData()
         
         let vc = PreviewViewController()
         vc.closure = { [weak self] img in
@@ -80,3 +104,11 @@ class FavoritesViewController: UIViewController, UITableViewDataSource {
     
 }
 
+extension FavoritesViewController {
+    
+    @objc func backButtonTapped() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+}
