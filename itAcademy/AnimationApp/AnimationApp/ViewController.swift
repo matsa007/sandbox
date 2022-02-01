@@ -62,49 +62,71 @@ extension ViewController {
     @objc func animationButtonTapped() {
         let viewRect = animationRectangle
         counter+=1
-
+        
+        
         
         //        MARK: - First action:
         
         if counter == 1 {
+            viewRect.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = false
+            viewRect.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = false
             
-            NSLayoutConstraint.activate([
-                viewRect.centerXAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
-                viewRect.centerYAnchor.constraint(equalTo: view.topAnchor, constant: 100)
-            ])
+            UIView.animate(withDuration: 2.0, animations: {
+                viewRect.transform = CGAffineTransform(rotationAngle: CGFloat(45.0 * .pi) / 180.0)
+                NSLayoutConstraint.activate([
+                    viewRect.centerXAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 100),
+                    viewRect.centerYAnchor.constraint(equalTo: self.view.topAnchor, constant: 100)
+                ])
+            })
         }
         
         //        MARK: - Second action:
         
         if counter == 2 {
-            NSLayoutConstraint.activate([
-                viewRect.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -100),
-                viewRect.centerYAnchor.constraint(equalTo: view.topAnchor, constant: 100)
-            ])
+            viewRect.centerXAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = false
+            viewRect.centerYAnchor.constraint(equalTo: self.view.topAnchor).isActive = false
+            
+            UIView.animate(withDuration: 2.0, animations: {
+                viewRect.transform = CGAffineTransform(rotationAngle: CGFloat(45.0 * .pi) / 180.0)
+                NSLayoutConstraint.activate([
+                    viewRect.centerXAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -100),
+                    viewRect.centerYAnchor.constraint(equalTo: self.view.topAnchor, constant: 100)
+                ])
+            })
         }
         
         //        MARK: - Third action:
         
         if counter == 3 {
-            NSLayoutConstraint.activate([
-                viewRect.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -100),
-                viewRect.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: -100)
-            ])
+            UIView.animate(withDuration: 2.0, animations: {
+                viewRect.transform = CGAffineTransform(rotationAngle: CGFloat(45.0 * .pi) / 180.0)
+                NSLayoutConstraint.activate([
+                    viewRect.centerXAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -100),
+                    viewRect.centerYAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100)
+                ])
+            })
         }
         
         //        MARK: - Fourth action:
         
         if counter == 4 {
-            NSLayoutConstraint.activate([
-                viewRect.centerXAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
-                viewRect.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: -100)
-            ])
+            UIView.animate(withDuration: 2.0, animations: {
+                viewRect.transform = CGAffineTransform(rotationAngle: CGFloat(45.0 * .pi) / 180.0)
+                NSLayoutConstraint.activate([
+                    viewRect.centerXAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 100),
+                    viewRect.centerYAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100)
+                ])
+            })
         }
         
         //        MARK: - Fifth action:
         
         if counter == 5 {
-            viewRect.center = view.center
+            UIView.animate(withDuration: 2.0, animations: {
+                viewRect.transform = CGAffineTransform(rotationAngle: CGFloat(45.0 * .pi) / 180.0)
+                viewRect.center = self.view.center
+                
+            })
             counter = 0
         }
     }
