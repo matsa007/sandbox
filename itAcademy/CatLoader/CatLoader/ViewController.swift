@@ -10,8 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     
     private let downloadButton = UIButton(type: .system)
-    public var arrayVC:Array <UIImage> = []
-    
+//    let navvc = UINavigationController(rootViewController: PreviewViewController())
+//    var vc = PreviewViewController()
+//
     override func viewDidLoad() {
         view.backgroundColor = .lightGray
         downloadButtonsetup()
@@ -46,17 +47,10 @@ class ViewController: UIViewController {
 extension ViewController {
     @objc func downloadButtonTapped() {
         let vc = PreviewViewController()
-        vc.closure = { [weak self] kiolo in
-            self?.arrayVC.append(kiolo)
-            print(kiolo)
-            print("Eto novi massiv na VC \(String(describing: self?.arrayVC))")
-//            vc.dismiss(animated: true, completion: nil)
-          }
         self.dismiss(animated: true, completion: nil)
         self.present(vc, animated: true, completion: nil)
-        
 //        navvc.modalPresentationStyle = .fullScreen
+//
 //        present(navvc, animated: true, completion: nil)
-        
     }
 }

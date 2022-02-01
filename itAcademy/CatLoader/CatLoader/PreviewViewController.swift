@@ -9,15 +9,14 @@ import UIKit
 
 class PreviewViewController: UIViewController {
     
-    private let imageView = UIImageView()
+    let imageView = UIImageView()
     let datasrc = DataSource()
-    let imageData = UIImage()
     let favoritesListButton = UIButton(type: .system)
     let addTofavoritesListButton = UIButton(type: .system)
     var favoritesCounter = 0
-    var imagePicker = UIImagePickerController()
-    public var closure: ((UIImage) -> ())?
-    let fvc = FavoritesViewController()
+    let fvc = FavViewController()
+    let nmvc = NetworkManager()
+    var arra:Array <UIImage> = []
 
     override func viewDidLoad() {
         addTofavoritesListButtonTapped()
@@ -33,6 +32,17 @@ class PreviewViewController: UIViewController {
         let urlUrl = URL(string: datasrc.urlStr)
         image.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageView)
+        
+        
+//        DispatchQueue.global(qos: .utility).sync {
+//            let urlData = try? Data(contentsOf: urlUrl!)
+//
+//            DispatchQueue.main.async {
+//                image.image = UIImage(data: urlData!)!
+//
+//            }
+//
+//        }
 
         DispatchQueue.global(qos: .utility).sync {
             let urlData = try? Data(contentsOf: urlUrl!)
@@ -90,14 +100,17 @@ extension PreviewViewController {
     
     @objc func favoritesListButtonTapped() {
         self.present(fvc, animated: true, completion: nil)
+        
+
+        
     }
 }
 
 extension PreviewViewController {
     
     @objc func addTofavoritesListButtonTapped() {
-        if let image = imageView.image {
-            fvc.arrPP.append(image)
+        if let image = imageView.image ?? nil {
+            fvc.arrayOfFavoriteImg.append(image)
         }
     }
 }

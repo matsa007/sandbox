@@ -7,30 +7,25 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController, UITableViewDataSource {
-    
-    
-    
+class FavoritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
     let tableView = UITableView()
-//    lazy var arrPP = [UIImage]()
+    let backButton = UIButton(type: .system)
     var arrPP:Array <UIImage> = [] {
             didSet {
                 tableView.reloadData()
             }
         }
-    let backButton = UIButton(type: .system)
+    
     
     override func viewDidLoad() {
-        
-        
-        
-        
-    
+
         tableViewSetup()
         view.backgroundColor = .purple
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         backButtonSetup()
+        tableView.rowHeight = 50
         super.viewDidLoad()
         
     }
@@ -47,30 +42,24 @@ class FavoritesViewController: UIViewController, UITableViewDataSource {
         button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         view.addSubview(button)
         
-        
+        NSLayoutConstraint.activate([
+            button.topAnchor.constraint(equalTo: view.topAnchor, constant: 700),
+            button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            button.bottomAnchor.constraint(equalTo: view.topAnchor, constant: 750),
+            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50)
+        ])
     }
     
     
     
     func tableViewSetup() {
         view.addSubview(tableView)
-        tableView.reloadData()
         
-        let vc = PreviewViewController()
-        vc.closure = { [weak self] img in
-            self?.arrPP.append(img)
-            print(img)
-            print("Eto novi massiv na FVC \(self!.arrPP))")
-//            vc.dismiss(animated: true, completion: nil)
-          }
-        
-        tableView.backgroundColor = .gray
-        tableView.rowHeight = 22
+        tableView.backgroundColor = view.backgroundColor
+        tableView.rowHeight = 1000
+        tableView.cellLayoutMarginsFollowReadableWidth = true
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        print("Na fav vidit massiv \(arrPP)")
-        
-        
+        self.tableView.centerXAnchor.anchorWithOffset(to: super.view.centerXAnchor)
         
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 110),
@@ -80,28 +69,22 @@ class FavoritesViewController: UIViewController, UITableViewDataSource {
         ])
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        
-        return arrPP.count
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
     }
     
-   
-    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        arrPP.count
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-       
         
+        cell.backgroundColor = view.backgroundColor
         cell.imageView?.image = arrPP[indexPath.row]
-        //        cell.textLabel?.text = "\(arrayKK[indexPath.row])"
-        
         return cell
     }
-    
-    
-    
-    
-    
+ 
 }
 
 extension FavoritesViewController {
@@ -109,6 +92,4 @@ extension FavoritesViewController {
     @objc func backButtonTapped() {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
 }
