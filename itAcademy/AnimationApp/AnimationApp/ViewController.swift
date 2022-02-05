@@ -33,6 +33,11 @@ class ViewController: UIViewController {
         animationRectangleSetup()
         animationButtonSetup()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        animateToPosition(rectanglePosition)
+    }
     //    MARK: - VIEW setuping:
     
     private func animationRectangleSetup() {
