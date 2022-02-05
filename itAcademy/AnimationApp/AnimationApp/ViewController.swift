@@ -7,12 +7,26 @@
 
 import UIKit
 
-
 class ViewController: UIViewController {
-    var animationRectangle = UIView()
-    let animationButton = UIButton(type: .system)
-    var counter = 0
-
+    enum RectanglePosition: CaseIterable {
+        case center
+        case topLeftCorner
+        case topRightCorner
+        case bottomRightCorner
+        case bottomLeftCorner
+        
+        func next() -> Self {
+            let all = Self.allCases
+            let idx = all.firstIndex(of: self)!
+            let next = all.index(after: idx)
+            return all[next == all.endIndex ? all.startIndex: next]
+        }
+    }
+    private var animationRectangle = UIView()
+    private let animationButton = UIButton(type: .system)
+    private var rectanglePosition: RectanglePosition = .center
+    private let toTheLeft = -1 , toTheRight = 1, toTheTop = -1, toTheBottom = 1, center = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -20,12 +34,12 @@ class ViewController: UIViewController {
         animationButtonSetup()
     }
     
-    func animationRectangleSetup() {
+    
+    private func animationRectangleSetup() {
         let viewR = animationRectangle
         viewR.translatesAutoresizingMaskIntoConstraints = false
         viewR.backgroundColor = UIColor(red: 0, green: 1, blue: 221/225, alpha: 1)
         view.addSubview(viewR)
-        
         NSLayoutConstraint.activate([
             viewR.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             viewR.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -34,7 +48,7 @@ class ViewController: UIViewController {
         ])
     }
     
-    func animationButtonSetup() {
+    private func animationButtonSetup() {
         let button = animationButton
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Start Animation", for: .normal)
@@ -46,7 +60,6 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 15
         button.addTarget(self, action: #selector(animationButtonTapped), for: .touchUpInside)
         view.addSubview(button)
-        
         NSLayoutConstraint.activate([
             button.topAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
             button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 80),
@@ -54,55 +67,49 @@ class ViewController: UIViewController {
             button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -80)
         ])
     }
-}
 
-extension ViewController {
-    @objc func animationButtonTapped() {
-        let viewRect = animationRectangle
-        counter+=1
-        
-        //        MARK: - First action:
-        
-        if counter == 1 {
-            
-            UIView.animate(withDuration: 2.0, animations: {
-                viewRect.transform = CGAffineTransform(translationX: -((self.view.frame.width/2)-viewRect.frame.width/2), y: -((self.view.frame.height/2)-viewRect.frame.height/2)).rotated(by: CGFloat.pi / 4)
-            })
+    @objc private func animationButtonTapped() {
+        rectanglePosition = rectanglePosition.next()
+        animateToPosition(rectanglePosition)
+    }
+
+    private func direction(xDirection: Int, yDirection: Int, isRotation: Bool) {
+        let x = ((self.view.frame.width/2) - (self.animationRectangle.frame.width/2))
+        let y = ((self.view.frame.height/2) - (self.animationRectangle.frame.height/2))
+        if isRotation {
+            if xDirection == center && yDirection == center {
+                UIView.animate(withDuration: 2.0, animations: {
+                    self.animationRectangle.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
+                }, completion: { (finished: Bool) in
+                    if finished {
+                        self.animationRectangle.transform = .identity
+                    }    })
+            } else {
+                return self.animationRectangle.transform = CGAffineTransform(translationX: x*CGFloat(xDirection), y: y*CGFloat(yDirection)).rotated(by: CGFloat.pi / 4)
+            }
+        } else {
+            return self.animationRectangle.transform = CGAffineTransform(translationX: x*CGFloat(xDirection), y: y*CGFloat(yDirection))
         }
-        //        MARK: - Second action:
-        
-        if counter == 2 {
-            UIView.animate(withDuration: 2.0, animations: {
-                viewRect.transform = CGAffineTransform(translationX: ((self.view.frame.width/2)-viewRect.frame.width/2), y: -((self.view.frame.height/2)-viewRect.frame.height/2))
-            })
-        }
-        //        MARK: - Third action:
-        
-        if counter == 3 {
-            UIView.animate(withDuration: 2.0, animations: {
-                viewRect.transform = CGAffineTransform(translationX: ((self.view.frame.width/2)-viewRect.frame.width/2), y: ((self.view.frame.height/2)-viewRect.frame.height/2)).rotated(by: CGFloat.pi / 4)
-            })
-        }
-        //        MARK: - Fourth action:
-        
-        if counter == 4 {
-            UIView.animate(withDuration: 2.0, animations: {
-                viewRect.transform = CGAffineTransform(translationX: -((self.view.frame.width/2)-viewRect.frame.width/2), y: ((self.view.frame.height/2)-viewRect.frame.height/2))
-            })
-        }
-        //        MARK: - Fifth action:
-        
-        if counter == 5 {
-            UIView.animate(withDuration: 2.0, animations: {
-                viewRect.transform = CGAffineTransform(rotationAngle: CGFloat(45.0 * .pi) / 180.0)
-            },    completion: { (finished: Bool) in
-                if finished {
-                    viewRect.transform = .identity
-                }    })
-            counter = 0
+    }
+    
+    private func animateToPosition(_ position: RectanglePosition) {
+        UIView.animate(withDuration: 2) { [self] in
+            switch position {
+            case .topLeftCorner:
+                direction(xDirection: toTheLeft, yDirection: toTheTop, isRotation: true)
+            case .topRightCorner:
+                direction(xDirection: toTheRight, yDirection: toTheTop, isRotation: false)
+            case .bottomRightCorner:
+                direction(xDirection: toTheRight, yDirection: toTheBottom, isRotation: true)
+            case .bottomLeftCorner:
+                direction(xDirection: toTheLeft, yDirection: toTheBottom, isRotation: false)
+            case .center:
+                direction(xDirection: center, yDirection: center, isRotation: true)
+            }
         }
     }
 }
+
 
 
 
