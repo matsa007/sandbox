@@ -32,6 +32,8 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         animationRectangleSetup()
         animationButtonSetup()
+        setupGestures()
+        view.isUserInteractionEnabled = true
     }
     
     override func viewDidLayoutSubviews() {
@@ -44,12 +46,13 @@ class ViewController: UIViewController {
         let viewR = animationRectangle
         viewR.translatesAutoresizingMaskIntoConstraints = false
         viewR.backgroundColor = UIColor(red: 0, green: 1, blue: 221/225, alpha: 1)
+        viewR.isUserInteractionEnabled = true
         view.addSubview(viewR)
         NSLayoutConstraint.activate([
             viewR.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             viewR.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            viewR.heightAnchor.constraint(equalToConstant: 50),
-            viewR.widthAnchor.constraint(equalToConstant: 50)
+            viewR.heightAnchor.constraint(equalToConstant: 100),
+            viewR.widthAnchor.constraint(equalToConstant: 100)
         ])
     }
     
@@ -72,22 +75,34 @@ class ViewController: UIViewController {
             button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -80)
         ])
     }
+    
+    func setupGestures() {
+        let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(rotateTriggered))
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panTriggered))
+        animationRectangle.addGestureRecognizer(panGesture)
+        animationRectangle.addGestureRecognizer(rotateGesture)
+    }
     // MARK: - Animation logic
     
-    private func direction(xDirection: Int, yDirection: Int, isRotation: Bool) {
-        let x = ((self.view.frame.width/2) - (self.animationRectangle.frame.width/2)), y = ((self.view.frame.height/2) - (self.animationRectangle.frame.height/2))
+    func direction(xDirection: Int, yDirection: Int, isRotation: Bool) {
+        let x = ((view.frame.width/2) - (animationRectangle.frame.width/2)), y = ((view.frame.height/2) - (animationRectangle.frame.height/2))
         if isRotation {
-            if xDirection == center && yDirection == center {
-                UIView.animate(withDuration: 3.5, animations: {
-                    self.animationRectangle.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4)
-                }, completion: { (finished: Bool) in
-                    self.animationRectangle.transform = CGAffineTransform(translationX: 0, y: 0)
-                })
+            if xDirection == 0 && yDirection == 0 {
+                if animationRectangle.center != view.center {
+                    UIView.animate(withDuration: 5, animations: {
+                        self.animationRectangle.transform = CGAffineTransform(rotationAngle: CGFloat.pi/4)
+                    }, completion: { (finished: Bool) in
+                        if finished {
+                            self.animationRectangle.transform = .identity
+                        }    })
+                } else {
+                    self.animationRectangle.transform = .identity
+                }
             } else {
-                self.animationRectangle.transform = CGAffineTransform(translationX: x*CGFloat(xDirection), y: y*CGFloat(yDirection)).rotated(by: CGFloat.pi / 4)
+                animationRectangle.transform = CGAffineTransform(translationX: x*CGFloat(xDirection), y: y*CGFloat(yDirection)).rotated(by: CGFloat.pi/4)
             }
         } else {
-            self.animationRectangle.transform = CGAffineTransform(translationX: x*CGFloat(xDirection), y: y*CGFloat(yDirection))
+            animationRectangle.transform = CGAffineTransform(translationX: x*CGFloat(xDirection), y: y*CGFloat(yDirection))
         }
     }
     
@@ -115,4 +130,36 @@ extension ViewController {
         rectanglePosition = rectanglePosition.next()
         animateToPosition(rectanglePosition)
     }
+    
+    @objc private func panTriggered(sender: UIPanGestureRecognizer) {
+        if sender.state == .began || sender.state == .changed {
+            let translation = sender.translation(in: self.view)
+            sender.view!.center = CGPoint(x: sender.view!.center.x + translation.x, y: sender.view!.center.y + translation.y)
+            sender.setTranslation(.zero, in: view)
+        }
+    }
+    
+    @objc private func rotateTriggered(gestureRecognizer: UIRotationGestureRecognizer) {
+        if let view = gestureRecognizer.view {
+            view.transform = view.transform.rotated(by: gestureRecognizer.rotation)
+            gestureRecognizer.rotation = 0
+        }
+    }
 }
+
+
+
+
+//    @objc private func rotateTriggered(gestureRecognizer: UIRotationGestureRecognizer) {
+//
+//        if let view = gestureRecognizer.view {
+//            view.transform = view.transform.rotated(by: gestureRecognizer.rotation)
+//        }
+//        var lastRotation = CGFloat()
+//        self.view.bringSubviewToFront(animationRectangle)
+//        let rotation = 0 - (lastRotation - gestureRecognizer.rotation)
+//        let currentTransformation = gestureRecognizer.view!.transform
+//        let newTransformation = currentTransformation.rotated(by: rotation)
+//        gestureRecognizer.view!.transform = newTransformation
+//        lastRotation = gestureRecognizer.rotation
+//    }
